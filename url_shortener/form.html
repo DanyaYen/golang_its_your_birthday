@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>URL Shortener</title></head>
+<body>
+  <h1>Write URL</h1>
+  <form action="/create" method="post">
+    <input type="text" name="url" placeholder="https://example.com" required style="width:300px">
+    <button type="submit">Short</button>
+  </form>
+
+  {{if .}}
+    <p>Your shortened URL: <a href="{{.}}">{{.}}</a></p>
+  {{end}}
+</body>
+</html>
