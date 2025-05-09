@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список видеокарт</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Видеокарты с Rozetka</h1>
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>Наличие</th>
+            <th>Ссылка</th>
+        </tr>
+        {{range .}}
+        <tr>
+            <td>{{.Title}}</td>
+            <td>{{.Price}}</td>
+            <td>{{.Availability}}</td>
+            <td><a href="{{.URL}}" target="_blank">Ссылка</a></td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+</html>
